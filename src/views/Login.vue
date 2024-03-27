@@ -21,7 +21,7 @@
         <button @click="register" class="log_in_button w-full">
             <h5 class="white">Войти</h5>
         </button>
-        <button class="w-full text-center">
+        <button class="w-full text-center mt-4">
           <h6 @click="$router.push('/register')">Создать аккаунт</h6>
         </button>
       </div>
