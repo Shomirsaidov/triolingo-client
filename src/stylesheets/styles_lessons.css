@@ -1,0 +1,266 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    background-color: #fefefe;
+    width: 100%;
+}
+body{
+    padding: 25px 32px 0px 32px;
+
+}
+.red{
+    color: #ff2400;
+}
+.green{
+    color: #0B8800;
+}
+.black{
+    color: #1e1e1e;
+}
+.white{
+    color: #fefefe;
+}
+.grey{
+    color: #eeeeee;
+}
+h1{
+    font-family: Roboto;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: auto;
+    color: #1e1e1e;
+}
+h2{
+    font-family: Roboto;
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: auto;
+    color: #1e1e1e;
+}
+h3{
+    font-family: Roboto;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: auto;
+    color: #1e1e1e;
+}
+h4{
+    font-family: Roboto;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: auto;
+    color: #1e1e1e;
+}
+h5{
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: auto;
+    color: #1e1e1e;
+}
+h6{
+    font-family: Roboto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: auto;
+    color: #1e1e1e;
+}
+.title_tab{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#back_to_level_1_button{
+    border: none;
+    background-color: #fefefe;
+    outline: none;
+    position: absolute;
+    left: 32px;
+}
+.lesson_tab{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.question_tab {
+    display: flex;
+    align-content: flex-start;
+    gap: 16px;
+}
+.question {
+    margin-top: 10px;
+    width: 112px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    border: solid #626262;
+    border-radius: 12px;
+}
+.translate_tab{
+    margin: 12px;
+    margin-top: 25px;
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+.variations {
+    width: 100%;
+    margin-top: 180px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+}
+.variation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 7px 16px;
+    border: solid #626262;
+    border-radius: 12px;
+}
+.button_tab {
+    margin-top: 98px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+}
+#errorText{
+    position: relative;
+    bottom: 24px;
+}
+.next_task_button {
+    z-index: 3;
+    width: 360px;
+    height: 51px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    background-color: #0B8800;
+    border: none;
+    outline: none;
+}
+.question_and_answer_tab {
+    display: flex;
+    flex-direction: column;
+    gap: 58px;
+}
+.answer {
+    bottom: 12px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    position: relative;
+}
+.line {
+    top: 20px;
+    position: absolute;
+    width: 173px;
+    height: 1px;
+    background-color: #1e1e1e;
+}
+.translates {
+    margin-top: 112px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.translate {
+    height: 39px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: solid #626262;
+    border-radius: 12px;
+}
+
+.audios_tab {
+    margin-left: 24px;
+    margin-top: 12px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 12px;
+}
+.audio {
+    border: solid #626262;
+    padding: 16px 16px;
+    border-radius: 12px;
+}
+.audio_slow{
+    border: solid #626262;
+    padding: 12px 12px;
+    border-radius: 12px;
+}
+.hiden_word {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4px;
+    position: relative;
+}
+.line_for_hidden_word {
+    width: 132px;
+    height: 1px;
+    background-color: #1e1e1e;
+    position: inherit;
+    top: 12px;
+}
+.word{
+    margin-left: 10px;
+    position: absolute;
+}
+.audio_border {
+    margin-left: 101px;
+    margin-right: 101px;
+    margin-top: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 128px;
+    height: 128px;
+    border-radius: 100px;
+    border: solid 8px #0B8800;
+}
+.play {
+    display: block;
+    opacity: 1;
+}
+.pause {
+    display: none;
+    opacity: 0;
+}
+.video {
+    margin-top: 128px;
+    width: 329px;
+    height: 185px;
+}
+.button {
+    margin-top: 120px;
+    position: absolute;
+    width: 329px;
+    height: 51px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    background-color: #0B8800;
+    border: none;
+    outline: none;
+}
+

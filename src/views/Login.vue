@@ -1,0 +1,71 @@
+<template>
+  <div class="home">
+
+
+
+    <div class="log_in_tab">
+        <div class="log_in_text">
+            <h2 class="text-xl font-bold">Вход в аккаунт</h2>
+            <h6>Введите ваш логин и пароль</h6>
+        </div>
+        <div class="log_in_input_tab w-full">
+            <h4>Имя</h4>
+            <input v-model="username" type="text" name="login" class="log_in_input w-full" placeholder="Введите полное имя">
+        </div>
+        <div class="log_in_input_tab w-full">
+            <h4>Пароль</h4>
+            <input v-model="password" type="password" name="password" class="log_in_input w-full" placeholder="Введите пароль">
+            <h5 class="red" id="password_error"></h5>
+        </div>
+        <h5 class="red" id="login_error">{{ error }}</h5>
+        <button @click="register" class="log_in_button w-full">
+            <h5 class="white">Войти</h5>
+        </button>
+        <button class="w-full text-center">
+          <h6 @click="$router.push('/register')">Создать аккаунт</h6>
+        </button>
+      </div>
+
+
+
+  </div>
+</template>
+
+<script>
+// @ is an alias to /src
+import axios from 'axios'
+
+export default {
+  name: 'Login Page',
+  components: {
+  },
+  data: () => ({
+    username: '',
+    password: '',
+    error: ''
+  }),
+  methods: {
+    async register() {
+      if(this.username.length && this.password.length) {
+        await axios.get(`https://triolingo3.vercel.app/login?username=${this.username}&password=${this.password}`)
+        .then(resp => {
+          localStorage.setItem('triolingo', JSON.stringify(resp.data))          
+          this.$router.push('/')
+        }) 
+        .catch(e => {
+          this.error = "Неверный логин или пароль !"
+        })
+      } else {
+        this.error = "Заполните все поля !"
+      }
+    }
+  }
+}
+</script>
+
+
+<style lang="scss">
+  @import '../stylesheets/styles_log_in.css';
+
+
+</style>

@@ -1,0 +1,129 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    background-color: #fefefe;
+    width: 100%;
+}
+body{
+    padding: 25px 32px 0px 32px;
+}
+.red{
+    color: #ff2400;
+}
+.green{
+    color: #0B8800;
+}
+.black{
+    color: #1e1e1e;
+}
+.white{
+    color: #fefefe;
+}
+.grey{
+    color: #eeeeee;
+}
+h1{
+    font-family: Roboto;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: auto;
+    color: #1e1e1e;
+}
+h2{
+    font-family: Roboto;
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: auto;
+    color: #1e1e1e;
+}
+h3{
+    font-family: Roboto;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: auto;
+    color: #1e1e1e;
+}
+h4{
+    font-family: Roboto;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: auto;
+    color: #1e1e1e;
+}
+h5{
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: auto;
+    color: #1e1e1e;
+}
+h6{
+    font-family: Roboto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: auto;
+    color: #1e1e1e;
+}
+.main_menu_tab {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+.profile_tab {
+    padding: 12px;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    border: solid #7d7d7d;
+    border-radius: 12px;
+}
+.username {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+.levels_tab {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.level {
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 69px;
+    border: solid #7d7d7d;
+    border-radius: 12px;
+}
+.unlock_level{
+    width: 40px !important;
+    height: 40px !important;
+    box-sizing: content-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 40px;
+    background-color: #0B8800;
+}
+.locked_level{
+    width: 40px !important;
+    height: 40px;
+    box-sizing: content-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 40px;
+    background-color: #1e1e1e;
+}
+
