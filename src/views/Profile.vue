@@ -74,8 +74,6 @@ export default {
     }
   },
   async mounted() {
-<<<<<<< HEAD
-
     if(this.isRegistered()) {
       this.accessToken = JSON.parse(localStorage.triolingo).token
       await axios.get('https://triolingo3.vercel.app/user?token=' + this.accessToken)
@@ -89,24 +87,8 @@ export default {
     } else {
       this.$router.push('/register')
     }
-
-
-
-=======
-    await axios.get('https://triolingo3.vercel.app/user?token=' + this.accessToken, {
-      // headers: {
-      //   Authorization: `Bearer ${this.accessToken}`
-      // }
-    })
-    .then(response => {
-      this.profileData = response.data      
-      this.$store.userData = response.data
-    })
-    .catch(error => {
-      console.error('Error:', error);
-    });
->>>>>>> 580e8fc05712656a3c816c7ce91e38b19069637d
   },
+
   computed: {
     getNameInitials() {
       if(this.profileData) {
