@@ -91,9 +91,10 @@ export default {
 
   computed: {
     getNameInitials() {
-      console.log(this.profileData.name.split(' '))
+      
       if(this.profileData) {
         let a = this.profileData.name.split(' ')
+        console.log(a)
         if(a.length > 1) {
           return a[0][0] + a[1][0]
         } else {
