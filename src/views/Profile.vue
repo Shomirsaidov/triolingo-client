@@ -6,7 +6,7 @@
 
       <div class="profile_tab shadow-lg">
           <!-- <img src="../assets/users_avatar.png" alt="photo of user"> -->
-          <div class="bg-green-600 p-4 rounded-full text-white font-black">{{ getNameInitials }}</div>
+          <div class="bg-green-600 p-4 rounded-full text-white font-black text-center" style="min-width: 55px;">{{ getNameInitials }}</div>
           <div class="username">
               <h5 class="green">Здравствуйте</h5>
               <h4 v-if="profileData">{{ profileData.name }}</h4>
