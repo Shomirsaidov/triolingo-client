@@ -245,14 +245,14 @@ h6{
     position: absolute;
 }
 .audio_border {
-    margin-left: 101px;
+    /* margin-left: 101px;
     margin-right: 101px;
     margin-top: 64px;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 128px;
-    height: 128px;
+    height: 128px; */
     border-radius: 100px;
     border: solid 8px #0B8800;
 }

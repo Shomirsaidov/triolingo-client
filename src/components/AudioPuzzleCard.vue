@@ -10,11 +10,12 @@
     <h4>Что он сказал ?</h4>
   </div>
 
-  <div class="audio_border mt-2">
+  <div class="flex justify-center mt-4">
+    <div class="audio_border p-4 mt-2">
         <img v-if="!speaking" @click="speak(lessonData.answer,1)" id="play" src="../svg/play.svg" alt="" class="play">
         <img v-if="speaking" @click="pauseSpeech" id="pause" src="../svg/pause.svg" alt="" >
+    </div>
   </div>
-
   <div class="translate_tab mt-4">
         <div class="hiden_word">
             <h4 class="word" id="word">{{ answer }}</h4>
