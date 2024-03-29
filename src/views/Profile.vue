@@ -16,7 +16,6 @@
       <div v-if="!profileData" style="height:75vh" class="w-full h-full flex flex-col justify-center items-center">
     
         <div id="loader"></div>
-        <h5 class="mt-4">Doleap Team & Shomirsaidov</h5>
         
       </div>
 
