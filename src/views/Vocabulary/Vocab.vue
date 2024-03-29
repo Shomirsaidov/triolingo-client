@@ -6,7 +6,7 @@
             <button @click="$router.back()">
                 <img src="../../svg/back.svg" alt="">
             </button>
-            <h4 class="font-black">Задача</h4>
+            <h4 class="font-black">Словарь</h4>
             <h4 class=""></h4>
         </div>
     </div>
