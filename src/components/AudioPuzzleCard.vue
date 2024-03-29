@@ -11,7 +11,7 @@
   </div>
 
   <div class="flex justify-center ">
-    <div class="audio_border p-4 ">
+    <div class="audio_border ">
         <img v-if="!speaking" @click="speak(lessonData.answer,1)" id="play" src="../svg/play.svg" alt="" class="play">
         <img v-if="speaking" @click="pauseSpeech" id="pause" src="../svg/pause.svg" alt="" >
     </div>
