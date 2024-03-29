@@ -6,11 +6,18 @@
 
       <div class="profile_tab shadow-lg">
           <!-- <img src="../assets/users_avatar.png" alt="photo of user"> -->
-          <div class="bg-green-600 p-4 rounded-full text-white font-black">{{ getNameInitials }}</div>
+          <div class="bg-green-600 p-4 rounded-full text-white font-black text-center" style="min-width: 55px;">{{ getNameInitials }}</div>
           <div class="username">
               <h5 class="green">Здравствуйте</h5>
               <h4 v-if="profileData">{{ profileData.name }}</h4>
           </div>
+      </div>
+
+      <div v-if="!profileData" style="height:75vh" class="w-full h-full flex flex-col justify-center items-center">
+    
+        <div id="loader"></div>
+        <h5 class="mt-4">Doleap Team & Shomirsaidov</h5>
+        
       </div>
 
 
@@ -94,9 +101,11 @@ export default {
       if(this.profileData) {
         let a = this.profileData.name.split(' ')
         if(a.length > 1) {
-          return a[0][0] + a[1][0]
+          let initials = a[0][0] + a[1][0]
+          return initials.toUpperCase()
         } else {
-          return a[0][0] + a[1][0]
+          let initials = a[0][0]
+          return initials.toUpperCase()
         }
       }
     }
@@ -107,9 +116,6 @@ export default {
 
 <style lang="scss" scoped>
   @import '../stylesheets/styles_main_menu.css';
-
-
-  
 
 
 </style>

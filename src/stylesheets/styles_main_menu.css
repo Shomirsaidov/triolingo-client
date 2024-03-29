@@ -12,6 +12,26 @@ body{
 .red{
     color: #ff2400;
 }
+#loader {
+    height: 70px;
+    width: 70px;
+    border-left: 7px solid green;
+    border-bottom: 1px solid green;
+    border-right: 1px solid green;
+    border-top: 7px solid greeny;
+    border-radius: 50%;
+    animation: spinner 0.5s linear infinite;
+  }
+  @keyframes spinner {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  
 .green{
     color: #0B8800;
 }

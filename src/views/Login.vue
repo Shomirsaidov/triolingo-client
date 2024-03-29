@@ -19,9 +19,12 @@
         </div>
         <h5 class="red" id="login_error">{{ error }}</h5>
         <button @click="register" class="log_in_button w-full">
-            <h5 class="white">Войти</h5>
-        </button>
-        <button class="w-full text-center mt-4">
+            <div v-if="loading" style="height: 100vh" class="w-full h-full flex flex-col justify-center items-center">
+                <div id="loader"></div>
+              </div>
+              <h5 class="white" v-if="!loading">Войти</h5>
+          </button>
+        <button class="w-full text-center mt-2">
           <h6 @click="$router.push('/register')">Создать аккаунт</h6>
         </button>
       </div>
@@ -42,11 +45,13 @@ export default {
   data: () => ({
     username: '',
     password: '',
-    error: ''
+    error: '',
+    loading: false
   }),
   methods: {
     async register() {
       if(this.username.length && this.password.length) {
+        this.loading = true
         await axios.get(`https://triolingo3.vercel.app/login?username=${this.username}&password=${this.password}`)
         .then(resp => {
           localStorage.setItem('triolingo', JSON.stringify(resp.data))          
@@ -55,6 +60,7 @@ export default {
         .catch(e => {
           this.error = "Неверный логин или пароль !"
         })
+        .finally(() => this.loading = false)
       } else {
         this.error = "Заполните все поля !"
       }

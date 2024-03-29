@@ -21,7 +21,10 @@
           </div>
           <h5 class="red" id="login_error">{{ error }}</h5>
           <button @click="register" class="log_in_button w-full">
-              <h5 class="white">Продолжить</h5>
+            <div v-if="loading" style="height: 100vh" class="w-full h-full flex flex-col justify-center items-center">
+                <div id="loader"></div>
+              </div>
+              <h5 class="white" v-if="!loading">Продолжить</h5>
           </button>
           <button class="w-full text-center mt-4">
             <h6 @click="$router.push('/login')">Войти</h6>
@@ -45,12 +48,14 @@ export default {
   data: () => ({
     username: '',
     password: '',
-    error: ''
+    error: '',
+    loading: false
   }),
   methods: {
     async register() {
       if(this.username.length && this.password.length) {
-        await axios.get(`https://triolingo3.vercel.app/register?username=${this.username}&password=${this.password}`)
+        this.loading = true
+        await axios.get(`https://triolingo33.vercel.app/register?username=${this.username}&password=${this.password}`)
         .then(resp => {
           localStorage.setItem('triolingo', JSON.stringify(resp.data))
           this.$router.push('/')
@@ -58,6 +63,7 @@ export default {
         .catch(e => {
           this.error = "Пользователь уже существует !"
         })
+        .finally(() => this.loading = false)
       } else {
         this.error = "Заполните все поля !"
       }
@@ -69,6 +75,9 @@ export default {
 
 <style lang="scss">
   @import '../stylesheets/styles_log_in.css';
+
+
+
 
 
 </style>
