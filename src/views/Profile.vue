@@ -23,8 +23,11 @@
       <div class="levels_tab" v-if="profileData">
           <h4>Уровни</h4>
           <div class="level shadow-lg">
-              <h4>Уровень Deutsch A1</h4>
-              <button v-if="profileData.level == 'A1' || profileData.level == 'A2' || profileData.level == 'B1'" @click="$router.push(`/lessons/A1`)" class="unlock_level px-4 py-2">
+              <h4>Уровень Deutsch A1</h4> 
+              <button v-if="profileData.level == 'A1' || profileData.level == 'A2' || profileData.level == 'B1'" @click="() => {
+                $router.push(`/lessons/A1`)
+                document.documentElement.requestFullscreen()
+                }" class="unlock_level px-4 py-2">
                   <img src="../svg/next.svg" alt="next" >
               </button>
               <button v-else class="locked_level px-4 py-2">
@@ -33,7 +36,10 @@
           </div>
           <div class="level shadow-lg">
               <h4>Уровень Deutsch A2</h4>
-              <button v-if="profileData.level == 'A2' || profileData.level == 'B1' " @click="$router.push(`/lessons/A2`)" class="unlock_level px-4 py-2">
+              <button v-if="profileData.level == 'A2' || profileData.level == 'B1' " @click="() => {
+                $router.push(`/lessons/A2`)
+                document.documentElement.requestFullscreen()
+                }" class="unlock_level px-4 py-2">
                   <img src="../svg/next.svg" alt="next">
               </button>
               <button v-else class="locked_level px-4 py-2">
@@ -42,7 +48,10 @@
           </div> 
           <div class="level shadow-lg">
               <h4>Уровень Deutsch B1</h4>
-              <button v-if="profileData.level == 'B1'" @click="$router.push(`/lessons/B1`)" class="unlock_level px-4 py-2">
+              <button v-if="profileData.level == 'B1'" @click="() => {
+                $router.push(`/lessons/B1`)
+                document.documentElement.requestFullscreen()
+              }" class="unlock_level px-4 py-2">
                   <img src="../svg/next.svg" alt="next">
               </button>
               <button v-else class="locked_level px-4 py-2">

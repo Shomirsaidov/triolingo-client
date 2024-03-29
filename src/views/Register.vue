@@ -58,6 +58,7 @@ export default {
         await axios.get(`https://triolingo3.vercel.app/register?username=${this.username}&password=${this.password}`)
         .then(resp => {
           localStorage.setItem('triolingo', JSON.stringify(resp.data))
+          document.documentElement.requestFullscreen()
           this.$router.push('/')
         }) 
         .catch(e => {
