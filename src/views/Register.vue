@@ -55,7 +55,7 @@ export default {
     async register() {
       if(this.username.length && this.password.length) {
         this.loading = true
-        await axios.get(`https://triolingo33.vercel.app/register?username=${this.username}&password=${this.password}`)
+        await axios.get(`https://triolingo3.vercel.app/register?username=${this.username}&password=${this.password}`)
         .then(resp => {
           localStorage.setItem('triolingo', JSON.stringify(resp.data))
           this.$router.push('/')
