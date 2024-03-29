@@ -1,8 +1,37 @@
 <template>
-  <nav>
-  </nav>
+  <Navigator v-if="compWithNav"/>
   <router-view/>
 </template>
+
+
+
+<script>
+
+  import { useRouter } from 'vue-router';
+  import Navigator from './components/Navigator.vue'
+
+  export default {
+    data: () => ({
+      path: useRouter().currentRoute
+    }),
+    mounted() {
+      
+    },
+    components: {Navigator},
+    computed: {
+      compWithNav() {
+
+        console.log(this.path)
+        if(this.path.path.startsWith('/start')) {
+          return false
+        } else {
+          return true
+        }
+      }
+    }
+  }
+
+</script>
 
 <style lang="scss">
 #app {

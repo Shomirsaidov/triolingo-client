@@ -25,10 +25,28 @@ const routes = [
     component: () => import('../views/LessonsList.vue')
   },
   {
+    path: '/vocabulary/:level',
+    alias: '/',
+    name: 'vocab_level_choose',
+    component: () => import('../views/Vocabulary/LessonsVocab.vue')
+  },
+  {
+    path: '/vocabulary/learn/:lesson_id',
+    alias: '/',
+    name: 'vocab_learn',
+    component: () => import('../views/Vocabulary/Vocab.vue')
+  },
+  {
     path: '/start/:lesson_id',
     alias: '/',
     name: 'start_lesson',
     component: () => import('../views/Lesson.vue')
+  },
+  {
+    path: '/vocabulary',
+    alias: '/',
+    name: 'vocabulary_choose_level',
+    component: () => import('../views/Vocabulary/LevelsVocab.vue')
   },
   
 

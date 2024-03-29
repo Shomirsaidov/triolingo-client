@@ -85,7 +85,7 @@ export default {
       await axios.get('https://triolingo3.vercel.app/user?token=' + this.accessToken)
       .then(response => {
         this.profileData = response.data      
-        this.$store.userData = response.data
+        this.$store.state.userData = response.data
       })
       .catch(error => {
         console.error('Error:', error);
