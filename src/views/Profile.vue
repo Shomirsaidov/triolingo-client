@@ -98,14 +98,15 @@ export default {
 
   computed: {
     getNameInitials() {
+      
       if(this.profileData) {
         let a = this.profileData.name.split(' ')
+        console.log(a)
         if(a.length > 1) {
           let initials = a[0][0] + a[1][0]
           return initials.toUpperCase()
         } else {
-          let initials = a[0][0]
-          return initials.toUpperCase()
+          return a[0][0] + a[1][0]
         }
       }
     }
