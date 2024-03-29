@@ -22,7 +22,7 @@
       compWithNav() {
 
         console.log(this.path)
-        if(this.path.path.startsWith('/start')) {
+        if(this.path.path.startsWith('/start') || this.path.path.startsWith('/login') || this.path.path.startsWith('/register')) {
           return false
         } else {
           return true

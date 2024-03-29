@@ -13,16 +13,16 @@
                 </div>
 
                 <div class="space-y-2">
-                    <div v-if="level_selected < $store.userData?.level" class="level2 mb-2" v-for="level in [1,2,3,4,5,6,7,8]">
+                    <div v-if="level_selected < $store.state.userData?.level" class="level2 mb-2" v-for="level in [1,2,3,4,5,6,7,8]">
                     <h4>Урок {{level}}</h4>
                     <button name="button_to_start_lesson" @click="() => $router.push(`/start/${level_selected}-${level}`)" class="unlock_level2">
                         <img src="../svg/next.svg" alt="next">
                     </button>
                     </div>
-                    <div v-if="level_selected == $store.userData?.level">
+                    <div v-if="level_selected == $store.state.userData?.level">
                         <div class="level2" v-for="level in [1,2,3,4,5,6,7,8]">
                             <h4>Урок {{level}}</h4>
-                            <button @click="$router.push(`/start/${level_selected}-${level}`)" v-if="level <= $store.userData.lesson" class="unlock_level2">
+                            <button @click="$router.push(`/start/${level_selected}-${level}`)" v-if="level <= $store.state.userData?.lesson" class="unlock_level2">
                                 <img src="../svg/next.svg" alt="next">
                             </button>
                             <button v-else class="locked_level">
@@ -58,6 +58,7 @@
     }),
     mounted() {
         this.level_selected = this.$route.params.level
+        console.log(this.$store.state.userData.lesson)
     }
     
   }
