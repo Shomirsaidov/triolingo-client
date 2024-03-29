@@ -143,6 +143,11 @@ h6{
 }
 .variations_audio {
     margin-top: 150px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
 }
 .variation {
     display: flex;
