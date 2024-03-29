@@ -34,9 +34,9 @@
 
   <div class="fixed bottom-4 w-full pr-16 flex justify-center" >
         <div>
-          <div v-if="started" class="p-2 px-4 bg-gray-200 mx-4 rounded-lg mb-4">
-            <h4 v-if="mistake.length > 0" class=" text-red-700 font-bold">{{ mistake }}</h4>
-            <h4 v-if="mistake.length == 0 && started" class="text-green-800 font-bold ">Правильно !</h4>        
+          <div v-if="started" class="p-2 px-4 bg-white border-t-2 mx-4 mb-4">
+            <h5 v-if="mistake.length > 0" class=" text-red-700 font-bold">{{ mistake }}</h5>
+            <h5 v-if="mistake.length == 0 && started" class="text-green-800 font-bold ">Правильно !</h5>        
           </div>
           <div class="flex justify-center">
             <button @click="next" :disabled="buttonDisabled" 
