@@ -106,7 +106,8 @@ export default {
           let initials = a[0][0] + a[1][0]
           return initials.toUpperCase()
         } else {
-          return a[0][0] + a[1][0]
+          let initials = a[0][0]
+          return initials.toUpperCase()
         }
       }
     }

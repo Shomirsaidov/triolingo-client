@@ -31,8 +31,10 @@
 
   <div class="fixed bottom-4 w-full pr-16 flex justify-center" >
         <div>
-          <h4 v-if="mistake.length > 0" class="pl-4 text-red-700 font-bold mb-4">{{ mistake }}</h4>
-          <h4 v-if="mistake.length == 0 && started" class="pl-4 text-green-800 font-bold mb-4">Правильно !</h4>        
+          <div v-if="started" class="p-2 px-4 bg-gray-200 mx-4 rounded-lg mb-4">
+            <h4 v-if="mistake.length > 0" class=" text-red-700 font-bold">{{ mistake }}</h4>
+            <h4 v-if="mistake.length == 0 && started" style="background: grey" class="text-green-800 font-bold ">Правильно !</h4>        
+          </div>
           <div class="flex justify-center">
             <button @click="next" :disabled="buttonDisabled" 
             :class="{ 'disabled': buttonDisabled , 'next_task_button': true}">
@@ -77,6 +79,7 @@ export default {
       this.buttonDisabled = this.puzzle.length === 0;
     },
     next() {
+      this.started = true
       if(this.puzzle.join('').toLowerCase() !== this.lessonData[this.$store.state.cardCounter].answer.toLowerCase()) {
         this.mistake = this.lessonData[this.$store.state.cardCounter].answer
         document.querySelector('.next_task_button').style.background = 'red'
@@ -85,7 +88,6 @@ export default {
         document.querySelector('.next_task_button').style.background = '#0B8800'
 
         this.mistake = ''
-        this.started = true
         if(this.rightAnswerGot) {
           this.$store.state.cardCounter += 1
         } else {
