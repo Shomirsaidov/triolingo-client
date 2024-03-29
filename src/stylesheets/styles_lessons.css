@@ -247,12 +247,18 @@ h6{
 .audio_border {
     /* margin-left: 101px;
     margin-right: 101px;
-    margin-top: 64px;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 128px;
     height: 128px; */
+    width: 128px;
+    height: 128px; 
+    box-sizing: content-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 64px;
     border-radius: 100px;
     border: solid 8px #0B8800;
 }
