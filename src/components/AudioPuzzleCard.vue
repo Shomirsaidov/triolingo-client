@@ -16,7 +16,7 @@
         <img v-if="speaking" @click="pauseSpeech" id="pause" src="../svg/pause.svg" alt="" >
     </div>
   </div>
-  <div class="translate_tab mt-4">
+  <div class="translate_tab">
         <div class="hiden_word">
             <h4 class="word" id="word">{{ answer }}</h4>
         </div>
