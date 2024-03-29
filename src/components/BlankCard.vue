@@ -19,12 +19,12 @@
     </div>
 
     <div class="translate_tab">
-        <h4>Lorem </h4>
+        <h4>{{ questionSentence.part1 }} </h4>
         <div class="hiden_word">
             <h4 class="word" id="word">{{ answer }}</h4>
             <div class="line_for_hidden_word"></div>
         </div>
-        <h4> dolor sit amet</h4>
+        <h4>{{ questionSentence.part2 }}</h4>
     </div>
 
     <div class="translates" v-if="lessonData">
@@ -68,10 +68,22 @@
         if(this.mistake.length > 0) {
           return true
         } 
+      },
+      questionSentence() {
+        if(this.lessonData) {
+          let sentence = this.lessonData.question.split('?')
+          return {
+            part1: sentence[0],
+            part2: sentence[1] 
+          } 
+        }
+        return ''
       }
     },
     mounted() {
+      
       this.lessonData = this.$store.state.lessonData[this.$store.state.cardCounter];
+      console.log(this.lessonData)
     },
     methods: {
         selectOption(e) {
@@ -122,7 +134,7 @@
               
             }
         }
-    }
+    },
   };
   </script>
   
