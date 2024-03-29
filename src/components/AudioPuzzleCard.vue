@@ -26,7 +26,7 @@
     <h4 @click="removePuzzle(index)" v-if="lessonData" v-for="(word,index) in puzzle">{{ word }}</h4>
   </div>
 
-  <div class="variations" v-if="lessonData">
+  <div class="variations_audio" v-if="lessonData">
     <div v-for="(word, index) in lessonData.options.split(',')" :key="index" class="variation"
         @click="addPuzzle(word)">
       <h6>{{ word }}</h6>

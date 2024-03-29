@@ -141,6 +141,9 @@ h6{
     justify-content: center;
     gap: 16px;
 }
+.variations_audio {
+    margin-top: 150px;
+}
 .variation {
     display: flex;
     align-items: center;
