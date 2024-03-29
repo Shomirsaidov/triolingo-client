@@ -7,7 +7,10 @@
             <h6 class="mt-2 text-white">Учить</h6>
         </div>
 
-        <div class="flex flex-col items-center" @click="$router.push('/vocabulary')">
+        <div class="flex flex-col items-center" @click="() => {
+            $router.push('/vocabulary')
+            document.documentElement.requestFullscreen()
+            }">
             <img src="../assets/vocab.svg" width="27"/>
             <h6 class="mt-2 text-white">Словарь</h6>
         </div>
