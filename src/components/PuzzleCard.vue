@@ -83,6 +83,9 @@ export default {
       if(this.puzzle.join('').toLowerCase() !== this.lessonData[this.$store.state.cardCounter].answer.toLowerCase()) {
         this.mistake = this.lessonData[this.$store.state.cardCounter].answer
         document.querySelector('.next_task_button').style.background = 'red'
+         if ('vibrate' in navigator) {
+          navigator.vibrate(200);
+        }
 
       } else {
         document.querySelector('.next_task_button').style.background = '#0B8800'
