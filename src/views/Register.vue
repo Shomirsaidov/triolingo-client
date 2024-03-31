@@ -63,6 +63,7 @@ export default {
         }) 
         .catch(e => {
           this.error = "Пользователь уже существует !"
+          this.error = e
         })
         .finally(() => this.loading = false)
       } else {
