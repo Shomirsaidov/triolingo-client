@@ -22,7 +22,7 @@
   </div>
 
   <div class="variations" v-if="lessonData">
-    <div v-for="(word, index) in lessonData[$store.state.cardCounter].options.split(',')" :key="index" class="variation"
+    <div v-for="(word, index) in lessonData.options.split(',')" :key="index" class="variation"
         @click="addPuzzle(word)">
       <h6>{{ word }}</h6>
     </div>
