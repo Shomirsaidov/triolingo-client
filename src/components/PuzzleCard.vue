@@ -66,9 +66,9 @@ export default {
     }
   },
   mounted() {
-    console.log(this.$store.state.lessonData)
+    
     this.lessonData = this.$store.state.lessonData[this.$store.state.cardCounter];
-    console.log(this.lessonData[this.$store.state.cardCounter].options.split(','))
+   
   },
   methods: {
     addPuzzle(word) {
