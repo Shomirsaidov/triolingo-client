@@ -66,7 +66,7 @@ export default {
     }
   },
   mounted() {
-    this.lessonData = this.$store.state.lessonData;
+    this.lessonData = this.$store.state.lessonData[this.$store.state.cardCounter];
     console.log(this.lessonData[this.$store.state.cardCounter].options.split(','))
   },
   methods: {
