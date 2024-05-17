@@ -13,7 +13,7 @@
   <div class="question_tab mt-2">
     <img src="../assets/girl_in_purple.png" alt="girl_in_purple">
     <div class="">
-      <h5 class="rounded-xl mt-4 border-2 p-3">Hallo, mein Freund</h5>
+      <h5 class="rounded-xl mt-4 border-2 p-3">{{ lessonData.question }}</h5>
     </div>
   </div>
 
