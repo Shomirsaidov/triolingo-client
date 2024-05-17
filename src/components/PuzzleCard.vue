@@ -81,7 +81,7 @@ export default {
     },
     next() {
       this.started = true
-      if(this.puzzle.join('').toLowerCase() !== this.lessonData[this.$store.state.cardCounter].answer.toLowerCase()) {
+      if(this.puzzle.join('').toLowerCase() !== this.lessonData.answer.toLowerCase()) {
         this.mistake = this.lessonData[this.$store.state.cardCounter].answer
         document.querySelector('.next_task_button').style.background = 'red'
          if ('vibrate' in navigator) {
