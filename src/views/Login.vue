@@ -24,9 +24,7 @@
               </div>
               <h5 class="white" v-if="!loading">Войти</h5>
           </button>
-        <button class="w-full text-center mt-2">
-          <h6 @click="$router.push('/register')">Создать аккаунт</h6>
-        </button>
+        
       </div>
 
 
