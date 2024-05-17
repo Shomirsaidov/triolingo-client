@@ -18,7 +18,7 @@
         <img src="../assets/girl_in_yellow.png" alt="girl_in_purple">
         <div class="question_and_answer_tab">
             <div class="question">
-                <h5>{{ lessonData.question }}</h5>
+                <h5 v-if="lessonData">{{ lessonData.question }}</h5>
             </div>  
         </div>
     </div>
