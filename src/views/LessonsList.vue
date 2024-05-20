@@ -27,7 +27,7 @@
                             <h4>Урок {{level}}</h4>
                             <button @click="() => {
                                 $router.push(`/start/${level_selected}-${level}`)
-                                document.documentElement.requestFullscreen()
+                                
                             }" v-if="level <= $store.state.userData?.lesson" class="unlock_level2">
                                 <img src="../svg/next.svg" alt="next">
                             </button>
