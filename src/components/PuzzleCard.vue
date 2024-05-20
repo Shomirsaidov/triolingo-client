@@ -82,7 +82,7 @@ export default {
     next() {
       this.started = true
       if(this.puzzle.join('').toLowerCase() !== this.lessonData.answer.toLowerCase()) {
-        this.mistake = this.lessonData[this.$store.state.cardCounter].answer
+        this.mistake = this.lessonData.answer
         document.querySelector('.next_task_button').style.background = 'red'
          if ('vibrate' in navigator) {
           navigator.vibrate(200);
