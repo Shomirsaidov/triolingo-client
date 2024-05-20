@@ -111,7 +111,7 @@ export default {
       console.log(this.lessonData.options)
       console.log(this.puzzle.join(' ').toLowerCase().trim())
       console.log(this.lessonData.answer.toLowerCase())
-      if(normalizeAnswer(this.puzzle.join(' ').toLowerCase().trim()) !== normalizeAnswer(this.lessonData.answer.toLowerCase())) {
+      if(this.normalizeAnswer(this.puzzle.join(' ').toLowerCase().trim()) !== this.normalizeAnswer(this.lessonData.answer.toLowerCase())) {
         this.mistake = this.lessonData.answer
         document.querySelector('.next_task_button').style.background = 'red'
 
