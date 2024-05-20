@@ -105,7 +105,7 @@ export default {
     },
     normalizeAnswer(text) {
       return text.replace(/\s\s+/g, ' ');
-    }
+    },
     next() {
       this.started = true
       console.log(this.lessonData.options)
