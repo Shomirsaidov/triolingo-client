@@ -83,7 +83,7 @@ export default {
       this.started = true
       console.log(this.puzzle.join('').toLowerCase())
       console.log(this.lessonData.answer.toLowerCase())
-      if(this.puzzle.join('').toLowerCase() !== this.lessonData.answer.toLowerCase()) {
+      if(this.puzzle.join('').toLowerCase().trim() !== this.lessonData.answer.toLowerCase().trim()) {
         this.mistake = this.lessonData.answer
         document.querySelector('.next_task_button').style.background = 'red'
          if ('vibrate' in navigator) {
