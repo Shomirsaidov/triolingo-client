@@ -103,12 +103,15 @@ export default {
       this.puzzle.splice(index, 1);
       this.buttonDisabled = this.puzzle.length === 0;
     },
+    normalizeAnswer(text) {
+      return text.replace(/\s\s+/g, ' ');
+    }
     next() {
       this.started = true
       console.log(this.lessonData.options)
       console.log(this.puzzle.join(' ').toLowerCase().trim())
       console.log(this.lessonData.answer.toLowerCase())
-      if(this.puzzle.join(' ').toLowerCase().trim() !== this.lessonData.answer.toLowerCase()) {
+      if(normalizeAnswer(this.puzzle.join(' ').toLowerCase().trim()) !== normalizeAnswer(this.lessonData.answer.toLowerCase())) {
         this.mistake = this.lessonData.answer
         document.querySelector('.next_task_button').style.background = 'red'
 
