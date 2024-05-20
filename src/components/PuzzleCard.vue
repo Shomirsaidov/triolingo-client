@@ -81,6 +81,8 @@ export default {
     },
     next() {
       this.started = true
+      console.log(this.puzzle.join('').toLowerCase())
+      console.log(this.lessonData.answer.toLowerCase())
       if(this.puzzle.join('').toLowerCase() !== this.lessonData.answer.toLowerCase()) {
         this.mistake = this.lessonData.answer
         document.querySelector('.next_task_button').style.background = 'red'
